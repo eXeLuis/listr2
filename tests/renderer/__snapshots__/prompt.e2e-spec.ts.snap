@@ -13,7 +13,7 @@ exports[`default renderer: prompt should render a prompt: WdiO5CUfBLf5hMlp9sPct5
 ",
   "[2K[1A[2K[G❯ This task will execute.
 
-[36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m
+[36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m
 ",
   "[2K[1A[2K[1A[2K[1A[2K[G❯ This task will execute.
 
@@ -43,7 +43,7 @@ exports[`default renderer: prompt should render multiple prompt: ZyUB9J2StmYMasX
 ",
   "[2K[1A[2K[G❯ This task will execute.
 
-[36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m
+[36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m
 ",
   "[2K[1A[2K[1A[2K[1A[2K[G❯ This task will execute.
 
@@ -52,7 +52,7 @@ exports[`default renderer: prompt should render multiple prompt: ZyUB9J2StmYMasX
   "[2K[1A[2K[1A[2K[1A[2K[G❯ This task will execute.
 
 [36m?[39m [1mGive me more input.[22m [2m…[22m 
-[36m▸[39m [36m[4mtest1[24m[39m
+[36m❯[39m [36m[4mtest1[24m[39m
   test2
 ",
   "[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G❯ This task will execute.
@@ -83,7 +83,7 @@ exports[`default renderer: prompt should run cancel callback: HaNF6mQO2FvhOQe4bP
 ",
   "[2K[1A[2K[G❯ This task will execute.
 
-[36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m
+[36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m
 ",
   "[2K[1A[2K[1A[2K[1A[2K[G❯ This task will execute.
 
@@ -118,7 +118,7 @@ exports[`default renderer: prompt should use skip enquirer: 8QRF9bQEdSKkH62yUKbt
   "[2K[1A[2K[1A[2K[G❯ This task will execute.
 ◼ Another task.
 
-[36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m
+[36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m
 ",
   "[2K[1A[2K[1A[2K[1A[2K[1A[2K[G↓ This task will execute.
 ◼ Another task.
@@ -156,7 +156,7 @@ exports[`default renderer: prompt should use the passed in enquirer: t3VXfqT0crs
 ",
   "[2K[1A[2K[G❯ This task will execute.
 
-[36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m
+[36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m
 ",
   "[2K[1A[2K[1A[2K[1A[2K[G❯ This task will execute.
 
@@ -178,7 +178,7 @@ exports[`simple renderer: prompt should render a prompt: WdiO5CUfBLf5hMlp9sPct59
 exports[`simple renderer: prompt should render a prompt: WdiO5CUfBLf5hMlp9sPct5973YhRlnLz-stderr 1`] = `
 [
   "[?25l",
-  "[36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m",
+  "[36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m",
   "[1D",
   "[2K[1G",
   "[32m✔[39m [1mGive me some input.[22m [2m·[22m [32mtest[39m",
@@ -212,7 +212,7 @@ exports[`simple renderer: prompt should render multiple prompt: ZyUB9J2StmYMasXk
 exports[`simple renderer: prompt should render multiple prompt: ZyUB9J2StmYMasXkHsMgjyszR4n0vvi9-stderr 1`] = `
 [
   "[?25l",
-  "[36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m",
+  "[36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m",
   "[1D",
   "[2K[1G",
   "[32m✔[39m [1mGive me some input.[22m [2m·[22m [32mtest[39m",
@@ -228,7 +228,7 @@ exports[`simple renderer: prompt should render multiple prompt: ZyUB9J2StmYMasXk
 ",
   "[?25l",
   "[36m?[39m [1mGive me more input.[22m [2m…[22m 
-[36m▸[39m [36m[4mtest1[24m[39m
+[36m❯[39m [36m[4mtest1[24m[39m
   test2",
   "[2A[25G",
   "[2B[2K[F[2K[F[2K[1G",
@@ -256,7 +256,7 @@ exports[`simple renderer: prompt should run cancel callback: HaNF6mQO2FvhOQe4bPQ
 exports[`simple renderer: prompt should run cancel callback: HaNF6mQO2FvhOQe4bPQRBRhk9MS9lx9w-stderr 1`] = `
 [
   "[?25l",
-  "[36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m",
+  "[36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m",
   "[1D",
   "[2K[1G",
   "[35m✖[39m [1mGive me some input.[22m [2m·[22m ",
@@ -281,7 +281,7 @@ exports[`simple renderer: prompt should use skip enquirer: 8QRF9bQEdSKkH62yUKbte
 exports[`simple renderer: prompt should use skip enquirer: 8QRF9bQEdSKkH62yUKbteKnrpevTbGan-stderr 1`] = `
 [
   "[?25l",
-  "[36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m",
+  "[36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m",
   "[1D",
   "[2K[1G",
   "[32m✔[39m [1mGive me some input.[22m [2m·[22m ",
@@ -311,7 +311,7 @@ exports[`simple renderer: prompt should use the passed in enquirer: t3VXfqT0crsC
 exports[`simple renderer: prompt should use the passed in enquirer: t3VXfqT0crsCYRzqYYWZGllN6oNARZcn-stderr 1`] = `
 [
   "[?25l",
-  "[36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m",
+  "[36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m",
   "[1D",
   "[2K[1G",
   "[32m✔[39m [1mGive me some input.[22m [2m·[22m [32mtest[39m",
@@ -352,7 +352,7 @@ exports[`test renderer: prompt should render a prompt: WdiO5CUfBLf5hMlp9sPct5973
 ",
   "{"event":"PROMPT","data":"\\u001b[?25l","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
-  "{"event":"PROMPT","data":"\\u001b[36m?\\u001b[39m \\u001b[1mGive me some input.\\u001b[22m \\u001b[2m‣\\u001b[22m \\u001b[46m\\u001b[30m\\u001b[30m \\u001b[39m\\u001b[30m\\u001b[39m\\u001b[49m","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
+  "{"event":"PROMPT","data":"\\u001b[36m?\\u001b[39m \\u001b[1mGive me some input.\\u001b[22m \\u001b[2m›\\u001b[22m \\u001b[46m\\u001b[30m\\u001b[30m \\u001b[39m\\u001b[30m\\u001b[39m\\u001b[49m","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
   "{"event":"PROMPT","data":"\\u001b[1D","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
@@ -397,7 +397,7 @@ exports[`test renderer: prompt should render multiple prompt: ZyUB9J2StmYMasXkHs
 ",
   "{"event":"PROMPT","data":"\\u001b[?25l","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
-  "{"event":"PROMPT","data":"\\u001b[36m?\\u001b[39m \\u001b[1mGive me some input.\\u001b[22m \\u001b[2m‣\\u001b[22m \\u001b[46m\\u001b[30m\\u001b[30m \\u001b[39m\\u001b[30m\\u001b[39m\\u001b[49m","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
+  "{"event":"PROMPT","data":"\\u001b[36m?\\u001b[39m \\u001b[1mGive me some input.\\u001b[22m \\u001b[2m›\\u001b[22m \\u001b[46m\\u001b[30m\\u001b[30m \\u001b[39m\\u001b[30m\\u001b[39m\\u001b[49m","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
   "{"event":"PROMPT","data":"\\u001b[1D","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
@@ -425,7 +425,7 @@ exports[`test renderer: prompt should render multiple prompt: ZyUB9J2StmYMasXkHs
 ",
   "{"event":"PROMPT","data":"\\u001b[?25l","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
-  "{"event":"PROMPT","data":"\\u001b[36m?\\u001b[39m \\u001b[1mGive me more input.\\u001b[22m \\u001b[2m…\\u001b[22m \\n\\u001b[36m▸\\u001b[39m \\u001b[36m\\u001b[4mtest1\\u001b[24m\\u001b[39m\\n  test2","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
+  "{"event":"PROMPT","data":"\\u001b[36m?\\u001b[39m \\u001b[1mGive me more input.\\u001b[22m \\u001b[2m…\\u001b[22m \\n\\u001b[36m❯\\u001b[39m \\u001b[36m\\u001b[4mtest1\\u001b[24m\\u001b[39m\\n  test2","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
   "{"event":"PROMPT","data":"\\u001b[2A\\u001b[25G","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
@@ -461,7 +461,7 @@ exports[`test renderer: prompt should run cancel callback: HaNF6mQO2FvhOQe4bPQRB
 ",
   "{"event":"PROMPT","data":"\\u001b[?25l","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
-  "{"event":"PROMPT","data":"\\u001b[36m?\\u001b[39m \\u001b[1mGive me some input.\\u001b[22m \\u001b[2m‣\\u001b[22m \\u001b[46m\\u001b[30m\\u001b[30m \\u001b[39m\\u001b[30m\\u001b[39m\\u001b[49m","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
+  "{"event":"PROMPT","data":"\\u001b[36m?\\u001b[39m \\u001b[1mGive me some input.\\u001b[22m \\u001b[2m›\\u001b[22m \\u001b[46m\\u001b[30m\\u001b[30m \\u001b[39m\\u001b[30m\\u001b[39m\\u001b[49m","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
   "{"event":"PROMPT","data":"\\u001b[1D","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
@@ -488,7 +488,7 @@ exports[`test renderer: prompt should use skip enquirer: 8QRF9bQEdSKkH62yUKbteKn
 ",
   "{"event":"PROMPT","data":"\\u001b[?25l","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
-  "{"event":"PROMPT","data":"\\u001b[36m?\\u001b[39m \\u001b[1mGive me some input.\\u001b[22m \\u001b[2m‣\\u001b[22m \\u001b[46m\\u001b[30m\\u001b[30m \\u001b[39m\\u001b[30m\\u001b[39m\\u001b[49m","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
+  "{"event":"PROMPT","data":"\\u001b[36m?\\u001b[39m \\u001b[1mGive me some input.\\u001b[22m \\u001b[2m›\\u001b[22m \\u001b[46m\\u001b[30m\\u001b[30m \\u001b[39m\\u001b[30m\\u001b[39m\\u001b[49m","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
   "{"event":"PROMPT","data":"\\u001b[1D","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
@@ -523,7 +523,7 @@ exports[`test renderer: prompt should use the passed in enquirer: t3VXfqT0crsCYR
 ",
   "{"event":"PROMPT","data":"\\u001b[?25l","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
-  "{"event":"PROMPT","data":"\\u001b[36m?\\u001b[39m \\u001b[1mGive me some input.\\u001b[22m \\u001b[2m‣\\u001b[22m \\u001b[46m\\u001b[30m\\u001b[30m \\u001b[39m\\u001b[30m\\u001b[39m\\u001b[49m","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
+  "{"event":"PROMPT","data":"\\u001b[36m?\\u001b[39m \\u001b[1mGive me some input.\\u001b[22m \\u001b[2m›\\u001b[22m \\u001b[46m\\u001b[30m\\u001b[30m \\u001b[39m\\u001b[30m\\u001b[39m\\u001b[49m","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
   "{"event":"PROMPT","data":"\\u001b[1D","task":{"hasRolledBack":false,"isRollingBack":false,"isCompleted":false,"isSkipped":false,"hasFinalized":false,"hasSubtasks":false,"title":"This task will execute.","hasReset":false,"hasTitle":true,"isPrompt":true,"isPaused":false,"isPending":true,"isStarted":false,"hasFailed":false,"isEnabled":true,"isRetrying":false,"path":["This task will execute."]}}
 ",
@@ -564,7 +564,7 @@ exports[`verbose renderer: prompt should render a prompt: WdiO5CUfBLf5hMlp9sPct5
 [
   "[STARTED] This task will execute.
 ",
-  "[PROMPT] [36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m
+  "[PROMPT] [36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m
 ",
   "[PROMPT] [32m✔[39m [1mGive me some input.[22m [2m·[22m [32mtest[39m
 ",
@@ -589,7 +589,7 @@ exports[`verbose renderer: prompt should render multiple prompt: ZyUB9J2StmYMasX
 [
   "[STARTED] This task will execute.
 ",
-  "[PROMPT] [36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m
+  "[PROMPT] [36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m
 ",
   "[PROMPT] [32m✔[39m [1mGive me some input.[22m [2m·[22m [32mtest[39m
 ",
@@ -602,7 +602,7 @@ exports[`verbose renderer: prompt should render multiple prompt: ZyUB9J2StmYMasX
   "[PROMPT] [32m✔[39m [1mGive me some input.[22m [2m·[22m [32mtest[39m
 ",
   "[PROMPT] [36m?[39m [1mGive me more input.[22m [2m…[22m 
-[PROMPT] [36m▸[39m [36m[4mtest1[24m[39m
+[PROMPT] [36m❯[39m [36m[4mtest1[24m[39m
 [PROMPT]   test2
 ",
   "[PROMPT] [32m✔[39m [1mGive me more input.[22m [2m·[22m [36mtest1[39m
@@ -625,7 +625,7 @@ exports[`verbose renderer: prompt should run cancel callback: HaNF6mQO2FvhOQe4bP
 [
   "[STARTED] This task will execute.
 ",
-  "[PROMPT] [36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m
+  "[PROMPT] [36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m
 ",
   "[PROMPT] [35m✖[39m [1mGive me some input.[22m [2m·[22m
 ",
@@ -640,7 +640,7 @@ exports[`verbose renderer: prompt should use skip enquirer: 8QRF9bQEdSKkH62yUKbt
 [
   "[STARTED] This task will execute.
 ",
-  "[PROMPT] [36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m
+  "[PROMPT] [36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m
 ",
   "[PROMPT] [32m✔[39m [1mGive me some input.[22m [2m·[22m
 ",
@@ -661,7 +661,7 @@ exports[`verbose renderer: prompt should use the passed in enquirer: t3VXfqT0crs
 [
   "[STARTED] This task will execute.
 ",
-  "[PROMPT] [36m?[39m [1mGive me some input.[22m [2m‣[22m [46m[30m[30m [39m[30m[39m[49m
+  "[PROMPT] [36m?[39m [1mGive me some input.[22m [2m›[22m [46m[30m[30m [39m[30m[39m[49m
 ",
   "[PROMPT] [32m✔[39m [1mGive me some input.[22m [2m·[22m [32mtest[39m
 ",

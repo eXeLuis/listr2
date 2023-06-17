@@ -325,38 +325,10 @@ export class Task<Ctx, Renderer extends ListrRendererFactory> extends ListrTaskE
 
     try {
       // add retry functionality
-      const retryCount =
-        typeof this.task?.retry === 'number' && this.task.retry > 0
-          ? this.task.retry + 1
-          : typeof this.task?.retry === 'object' && this.task.retry.tries > 0
-            ? this.task.retry.tries + 1
-            : 1
-      const retryDelay = typeof this.task.retry === 'object' && this.task.retry.delay
-
-      for (let retries = 1; retries <= retryCount; retries++) {
-        try {
-          // handle the results
-          await handleResult(this.taskFn(context, wrapper))
-
-          break
-        } catch (err: any) {
-          if (retries !== retryCount) {
-            this.retry = { count: retries, error: err }
-            this.message$ = { retry: this.retry }
-            this.title$ = this.initialTitle
-            this.output = undefined
-
-            wrapper.report(err, ListrErrorTypes.WILL_RETRY)
-
-            this.state$ = ListrTaskState.RETRY
-
-            if (retryDelay) {
-              await this.pause(retryDelay)
-            }
-          } else {
-            throw err
-          }
-        }
+      if (typeof this.task.retry === 'object' && this.task.retry.timeout) {
+        await this.runWithTimeout(context, wrapper, handleResult)
+      } else {
+        await this.runWithRetry(context, wrapper, handleResult)
       }
 
       if (this.isStarted() || this.isRetrying()) {
@@ -414,6 +386,108 @@ export class Task<Ctx, Renderer extends ListrRendererFactory> extends ListrTaskE
       }
     } finally {
       this.close()
+    }
+  }
+
+  private parseTimeout (timeout: number): string {
+    // 1 Hour = 1 * 60 * 60 * 1000
+    const hours = Math.floor(timeout / 1000 / 60 / 60).toString()
+    const minutes = Math.floor(timeout / 1000 / 60 % 60)
+      .toString()
+      .padStart(2, '0')
+    const seconds = Math.floor(timeout / 1000 % 60)
+      .toString()
+      .padStart(2, '0')
+    const milliseconds = Math.floor(timeout % 1000)
+      .toString()
+      .padStart(3, '0')
+
+    if (hours !== '0') {
+      return `${hours}h ${minutes}min`
+    }
+
+    if (minutes !== '00') {
+      return `${minutes}:${seconds}min`
+    }
+
+    if (seconds !== '00') {
+      return `${seconds}.${milliseconds}sec`
+    }
+
+    return `${milliseconds}ms`
+  }
+
+  private async runWithTimeout (context: Ctx, wrapper: TaskWrapper<Ctx, Renderer>, handleResult: (result: any) => Promise<any>): Promise<void> {
+    if (typeof this.task.retry !== 'object') {
+      return
+    }
+
+    const timeout = Date.now() + this.task.retry.timeout
+    const retryDelay = typeof this.task.retry === 'object' && this.task.retry.delay
+
+    let lastErr
+
+    do {
+      try {
+        await handleResult(this.taskFn(context, wrapper))
+
+        return
+      } catch (err: any) {
+        lastErr = err
+
+        this.retry = {
+          timeout: this.parseTimeout(this.task.retry.timeout),
+          error: err
+        }
+        this.message$ = { retry: this.retry }
+        this.title$ = this.initialTitle
+        this.output = undefined
+
+        wrapper.report(err, ListrErrorTypes.WILL_RETRY)
+
+        this.state$ = ListrTaskState.RETRY
+
+        if (retryDelay) {
+          await this.pause(retryDelay)
+        }
+      }
+    } while (Date.now() < timeout)
+    throw lastErr
+  }
+
+  private async runWithRetry (context: Ctx, wrapper: TaskWrapper<Ctx, Renderer>, handleResult: (result: any) => Promise<any>): Promise<void> {
+    const retryCount =
+      typeof this.task?.retry === 'number' && this.task.retry > 0
+        ? this.task.retry + 1
+        : typeof this.task?.retry === 'object' && this.task.retry.tries > 0
+          ? this.task.retry.tries + 1
+          : 1
+    const retryDelay = typeof this.task.retry === 'object' && this.task.retry.delay
+
+    for (let retries = 1; retries <= retryCount; retries++) {
+      try {
+        // handle the results
+        await handleResult(this.taskFn(context, wrapper))
+
+        return
+      } catch (err: any) {
+        if (retries !== retryCount) {
+          this.retry = { count: retries, error: err }
+          this.message$ = { retry: this.retry }
+          this.title$ = this.initialTitle
+          this.output = undefined
+
+          wrapper.report(err, ListrErrorTypes.WILL_RETRY)
+
+          this.state$ = ListrTaskState.RETRY
+
+          if (retryDelay) {
+            await this.pause(retryDelay)
+          }
+        } else {
+          throw err
+        }
+      }
     }
   }
 

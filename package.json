@@ -26,6 +26,7 @@
   },
   "scripts": {
     "build": "tsup-node",
+    "prepare": "npm run build",
     "dev:start": "tsup-node --watch",
     "example": "TS_NODE_PROJECT=examples/tsconfig.json NODE_OPTIONS='--no-warnings --experimental-specifier-resolution=node --experimental-vm-modules --loader ./loader.js' node",
     "clean": "rimraf node_modules pnpm-lock.yaml",

@@ -312,7 +312,7 @@ export class DefaultRenderer implements ListrRenderer {
             output.push(
               ...this.format(
                 this.logger.suffix(task.title, {
-                  field: `${ListrLogLevels.RETRY}:${task.message.retry.count}`,
+                  field: task.message.retry.timeout ? `TIMEOUT:${task.message.retry.timeout}` : `${ListrLogLevels.RETRY}:${task.message.retry.count}`,
                   format: () => color.yellow,
                   condition: rendererOptions.suffixRetries
                 }),

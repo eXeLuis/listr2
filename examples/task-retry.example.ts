@@ -74,3 +74,20 @@ await new Listr(
   ],
   { exitOnError: false }
 ).run()
+
+await new Listr(
+  [
+    {
+      title: 'Some type errors',
+      task: async (_, task): Promise<void> => {
+        await delay(1000)
+        throw new Error('This type can not be assigned to type with, oh noes')
+      },
+      retry: {
+        timeout: 1 * 60 * 1000, // 1 Minute
+        delay: 5000
+      }
+    }
+  ],
+  { exitOnError: false }
+).run()
