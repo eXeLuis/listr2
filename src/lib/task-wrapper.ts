@@ -105,8 +105,11 @@ export class TaskWrapper<Ctx, Renderer extends ListrRendererFactory> {
     return this.task.isRetrying() ? this.task.retry : { count: 0 }
   }
 
+  /**
+   * Return a Promise and make listr wait for action to return
+   */
   public async waitFor (action: () => Promise<void>): Promise<void> {
-    await this.task.waitFor(action)
+    return this.task.waitFor(action)
   }
 
   /**

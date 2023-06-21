@@ -243,7 +243,7 @@ export class Task<Ctx, Renderer extends ListrRendererFactory> extends ListrTaskE
   public async waitFor (action: () => Promise<void>): Promise<void> {
     const state = this.state
 
-    this.state$ = ListrTaskState.PAUSED
+    this.state$ = ListrTaskState.WAITING
     await action()
     this.state$ = state
   }
