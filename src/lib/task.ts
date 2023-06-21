@@ -239,6 +239,15 @@ export class Task<Ctx, Renderer extends ListrRendererFactory> extends ListrTaskE
     return this.closed
   }
 
+  /** Pause the given task until action is performed */
+  public async waitFor (action: () => Promise<void>): Promise<void> {
+    const state = this.state
+
+    this.state$ = ListrTaskState.PAUSED
+    await action()
+    this.state$ = state
+  }
+
   /** Pause the given task for certain time. */
   public async pause (time: number): Promise<void> {
     const state = this.state

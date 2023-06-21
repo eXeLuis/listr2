@@ -105,6 +105,10 @@ export class TaskWrapper<Ctx, Renderer extends ListrRendererFactory> {
     return this.task.isRetrying() ? this.task.retry : { count: 0 }
   }
 
+  public async waitFor (action: () => Promise<void>): Promise<void> {
+    await this.task.waitFor(action)
+  }
+
   /**
    * Create a new prompt for getting user input through `enquirer`.
    *
