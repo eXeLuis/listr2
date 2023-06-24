@@ -84,7 +84,7 @@ await new Listr(
         throw new Error('This type can not be assigned to type with, oh noes')
       },
       retry: {
-        timeout: 1 * 60 * 1000, // 1 Minute
+        timeout: 15 * 1000, // 15 Seconds
         delay: 5000
       }
     }

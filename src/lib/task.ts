@@ -434,34 +434,42 @@ export class Task<Ctx, Renderer extends ListrRendererFactory> extends ListrTaskE
     const timeout = Date.now() + this.task.retry.timeout
     const retryDelay = typeof this.task.retry === 'object' && this.task.retry.delay
 
-    let lastErr
+    const retry = async (iterator = 0): Promise<void> => {
+      const time = Date.now()
 
-    do {
       try {
         await handleResult(this.taskFn(context, wrapper))
 
         return
-      } catch (err: any) {
-        lastErr = err
-
-        this.retry = {
-          timeout: this.parseTimeout(this.task.retry.timeout),
-          error: err
+      } catch (err) {
+        if (typeof this.task.retry !== 'number') {
+          this.retry = {
+            timeout: this.parseTimeout(this.task.retry.timeout),
+            error: err as Error
+          }
         }
         this.message$ = { retry: this.retry }
         this.title$ = this.initialTitle
-        this.output = undefined
 
-        wrapper.report(err, ListrErrorTypes.WILL_RETRY)
+        wrapper.report(err as Error, ListrErrorTypes.WILL_RETRY)
 
         this.state$ = ListrTaskState.RETRY
 
         if (retryDelay) {
           await this.pause(retryDelay)
         }
+
+        if (time < timeout) {
+          await retry(iterator + 1)
+        } else {
+          throw err
+        }
+
+        return
       }
-    } while (Date.now() < timeout)
-    throw lastErr
+    }
+
+    await retry()
   }
 
   private async runWithRetry (context: Ctx, wrapper: TaskWrapper<Ctx, Renderer>, handleResult: (result: any) => Promise<any>): Promise<void> {
